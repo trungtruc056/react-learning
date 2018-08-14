@@ -1,0 +1,28 @@
+h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.viewProfile a {
+    color: #fff;
+}
+.viewProfile:hover {
+    background: #5cb85c;
+    border-color: #4cae4c;
+}
+.viewProfile a:hover {
+    text-decoration: none;
+}
+.pt-section{
+    padding-top: 85px;
+}
+.pb-section{
+    padding-bottom: 70px;
+}
+.pb-heading{
+    padding-bottom: 45px;
+}

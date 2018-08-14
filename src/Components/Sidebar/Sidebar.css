@@ -1,0 +1,13 @@
+.side-bar ul li a {
+    display: inline-block;
+}
+
+.side-bar ul li:before {
+    content: ">";
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.side-bar ul li:hover {
+    background: #feba0f;
+}

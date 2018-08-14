@@ -1,0 +1,12 @@
+.item-block {
+    display: inline-block;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.item-block:nth-last-child(-n+2) .mb-50{
+    margin-bottom: 0;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
