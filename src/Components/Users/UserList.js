@@ -12,7 +12,7 @@ class UserList extends Component {
         }
     }
     componentDidMount() {
-        UserAPI.getLimit().then((res) => {
+        UserAPI.getLimit(6).then((res) => {
             this.setState({
                 userList: res.data
             })

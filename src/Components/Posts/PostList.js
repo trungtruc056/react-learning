@@ -12,7 +12,7 @@ class PostList extends Component {
         }
     }
     componentDidMount () {
-        PostAPI.getLimit().then((res) => {
+        PostAPI.getLimit(6).then((res) => {
             this.setState({
                 postList: res.data
             })
