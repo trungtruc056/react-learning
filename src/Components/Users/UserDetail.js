@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import UserInfo from './UserInfo';
-// import UserPost from './UserPost';
+import UserInfo from './UserInfo';
+import UserPost from './UserPost';
 import UserAPI from './userAPI';
+import PostAPI from './../Posts/postAPI';
 
 class UserDetail extends Component {
     constructor() {
@@ -18,41 +19,37 @@ class UserDetail extends Component {
                 userDetail: res.data
             })
         });
+
+        PostAPI.getWithUser(userId).then((res) => {
+            this.setState({
+                userPost: res.data
+            })
+            console.log(res.data);
+        })
     }
 
     render() {
         return (
-            <div>
-                {
-                    this.state.userDetail ?
-                        <div>
-                            Id: {this.state.userDetail.id}
-                            <br/>
-                            Name: {this.state.userDetail.name}
-                            <br/>
-                            Email: {this.state.userDetail.email}
-                        </div>
-                    : 'User not found'
-                }
+            <div className="user-detail">
+                <div className="user-info">
+                    {
+                        this.state.userDetail ?
+                            <UserInfo user={this.state.userDetail} />
+                        : 'User not found'
+
+                    }
+                </div>
+                <div className="user-post">
+                <h1>User Posts</h1>
+                    {
+                        this.state.userPost ?
+                            <UserPost user={this.state.userPost} />
+                        : 'User not have post'
+                    }
+                </div>
             </div>
         );
     }
 }
 
 export default UserDetail;
-
-// class UserDetail extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h1>Welcome to User Detail</h1>
-//                 <h2>User Info</h2>
-//                 <UserInfo />
-//                 <h2>User Post</h2>
-//                 <UserPost />
-//             </div>
-//         );
-//     }
-// }
-
-// export default UserDetail;

@@ -9,7 +9,7 @@ class Header extends Component {
 
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
                         <img src={logo} width="150" height="30" alt=""></img>

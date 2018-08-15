@@ -4,7 +4,17 @@ class UserPost extends Component {
     render() {
         return (
             <div>
-                <h1>This is User Post</h1>
+                {
+                    this.props.user ?
+                        <div>
+                            Id: {this.props.user.id}
+                            <br/>
+                            Title: {this.props.user.title}
+                            <br/>
+                            Description: {this.props.user.body}
+                        </div>
+                    : 'User not have Post'
+                }
             </div>
         );
     }

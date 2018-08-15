@@ -1,32 +1,17 @@
 import React, { Component } from 'react';
-import UserAPI from './userAPI';
 
 class UserInfo extends Component {
-    constructor() {
-        super();
-        this.state = {
-            userDetail: []
-        }
-    }
-    componentDidMount() {
-        const userId = parseInt(this.props.match.params.id, 10);
-        UserAPI.get(userId).then((res) => {
-            this.setState({
-                userDetail: res.data
-            })
-        })
-    }
     render() {
         return (
             <div>
                 {
-                    this.state.userDetail ?
+                    this.props.user ?
                         <div>
-                            Id: {this.state.userDetail.id}
+                            Id: {this.props.user.id}
                             <br/>
-                            Name: {this.state.userDetail.name}
+                            Name: {this.props.user.name}
                             <br/>
-                            Email: {this.state.userDetail.email}
+                            Email: {this.props.user.email}
                         </div>
                     : 'User not found'
                 }
