@@ -5,13 +5,13 @@ class UserPost extends Component {
         return (
             <div>
                 {
-                    this.props.user ?
+                    this.props.usp ?
                         <div>
-                            Id: {this.props.user.id}
+                            Id: {this.props.usp.id}
                             <br/>
-                            Title: {this.props.user.title}
+                            Title: {this.props.usp.title}
                             <br/>
-                            Description: {this.props.user.body}
+                            Description: {this.props.usp.body}
                         </div>
                     : 'User not have Post'
                 }

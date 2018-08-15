@@ -24,7 +24,6 @@ class UserDetail extends Component {
             this.setState({
                 userPost: res.data
             })
-            console.log(res.data);
         })
     }
 
@@ -42,8 +41,13 @@ class UserDetail extends Component {
                 <div className="user-post">
                 <h1>User Posts</h1>
                     {
+
                         this.state.userPost ?
-                            <UserPost user={this.state.userPost} />
+                        this.state.userPost.map(item => (
+                            <div key={item.id}>
+                                <UserPost usp={item} />
+                                </div>
+                            ))
                         : 'User not have post'
                     }
                 </div>
