@@ -43,7 +43,6 @@ class UserDetail extends Component {
                     </Col>
                     
                     <div className="user-post">
-                    {console.log(this.state.userDetail.userId)}
                     <h1 className="text-center mb-30">Post of User</h1>
                         {
                             this.state.userPost ?
