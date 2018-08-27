@@ -3,6 +3,7 @@ import UserAPI from './userAPI';
 import UserBlock from './UserBlock';
 import { Container, Row, Col } from 'reactstrap';
 import './Users.css';
+import { Route } from 'react-router-dom';
 
 class UserList extends Component {
     constructor() {
@@ -30,6 +31,11 @@ class UserList extends Component {
                         ))
                     }
                 </Row>
+                <Route path="/users/1" render={() => {
+                    return(
+                        <h1>Haaaahaa</h1>
+                    )
+                }}/>
             </Container>
         );
     }

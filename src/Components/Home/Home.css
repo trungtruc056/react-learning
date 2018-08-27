@@ -2,3 +2,7 @@
     height: 542px;
     width: 100%;
 }
+
+.carousel-control-prev, .carousel-control-next {
+    cursor: pointer;
+}
